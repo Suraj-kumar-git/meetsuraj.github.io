@@ -92,27 +92,6 @@ select {
   display: table;
   clear: both;
 }
-/* .para1{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-.para2{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-.para3{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}*/
 </style>
 </head>
 <body>
@@ -145,15 +124,6 @@ select {
       <i class="fas fa-bars"></i>
     </div>
   </nav>
-
-<!-- <div class="para1"> 
-<h2>Let's Chat with Suraj</h2></div>
-<div class="para2"><h3>Please Enter your contact detail and I will contact you through the same.</h3></div>
-
-<div class="para3"><p><i>Or you can also contact me directly via <a href="https://www.linkedin.com/in/suraj-kumar-472140203/">
-  <b>LinkedIn</b><i class="fab fa-linkedin"></i></a></i></p>
-  </div>
--->
 <div class="row" >
 
 <div class="column1">
@@ -163,8 +133,9 @@ select {
   <b>LinkedIn</b><i class="fab fa-linkedin"></i></a></i></p>
 </div>
   
-<div class="column2" required>
-  <form onsubmit="sendEmail(); reset(); return false;">
+<div class="column2">
+  <!--<form onsubmit="sendEmail(); reset(); return false;">-->
+  <form action="https://formspree.io/f/xdobroyy" method="POST">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" value="" required/>
     <label for="lname">Last Name</label>
@@ -180,28 +151,10 @@ select {
     </select>
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Please Write in details.." style="height:100px"  required></textarea>
-    <button type="submit">Submit</button>  
+    <a href="response.html"><button type="submit">Submit</button></a>  
   </form>
 </div>
 </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-  function sendEmail(){
-    Email.send({
-      Host : "smtp.gmail.com",
-      Username : "11baklol2001@gmail.com",
-      Password : "73524Idea#",
-      To : '11baklol2001@gmail.com',
-      From : document.getElementById("email").value,
-      Subject : "Contact via Portfolio",
-      Body : "Name: "+document.getElementById("fname").value + " "+document.getElementById("lname").value
-      +"<br> Email: "+document.getElementById("email").value
-      +"<br> From: "+document.getElementById("country").value
-      +"<br> Subect: <br>"+document.getElementById("subject").value
-  }).then(
-    message => alert(message)
-  );
-  }
-</script>
+
 </body>
 </html>
